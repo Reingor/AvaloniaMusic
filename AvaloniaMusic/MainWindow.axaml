@@ -24,13 +24,13 @@
 						</Grid.ColumnDefinitions>
 						<Image Source="{Binding AvatarImage}" Grid.Column="0" Stretch="None" HorizontalAlignment="Center" VerticalAlignment="Center"/>
 						<TextBlock Text="Album Name" Grid.Column="1"/>
-						<TextBlock Text="{Binding PlaylistName}" Grid.Column="1" VerticalAlignment="Center"/>
+						<TextBlock Text="{Binding PlaylistName}" Grid.Column="1" VerticalAlignment="Center" Margin="0,50"/>
 						<TextBlock Text="Record Label" Grid.Column="2"/>
-						<TextBlock Text="{Binding RecordLabel}" Grid.Column="2" VerticalAlignment="Center"/>
+						<TextBlock Text="{Binding RecordLabel}" Grid.Column="2" VerticalAlignment="Center" Margin="0,50" />
 						<TextBlock Text="Release Date" Grid.Column="3"/>
-						<TextBlock Text="{Binding ReleaseDate}" Grid.Column="3" VerticalAlignment="Center"/>
+						<TextBlock Text="{Binding ReleaseDate}" Grid.Column="3" VerticalAlignment="Center" Margin="0,50"/>
 						<TextBlock Text="Genre" Grid.Column="4"/>
-						<TextBlock Text="{Binding Genre}" Grid.Column="4" VerticalAlignment="Center"/>
+						<TextBlock Text="{Binding Genre}" Grid.Column="4" VerticalAlignment="Center" Margin="0,50"/>
 					</Grid>
 				</DataTemplate>
 			</ListBox.ItemTemplate>

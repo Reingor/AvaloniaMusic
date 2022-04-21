@@ -17,8 +17,10 @@ namespace AvaloniaMusic
             load.LoadHtml();
 			List<Music> items = new List<Music>();
 
+
+
 			List<Playlist> playlist = new List<Playlist>()
-			{ new Playlist() { AvatarImage=load.imageDraw, PlaylistName =load.Data["albumName"][0], Genre=load.Data["genre"][0], RecordLabel = load.RecordLabel, ReleaseDate=load.ReleaseDate, } };
+			{ new Playlist() { AvatarImage=load!.imageDraw, PlaylistName =load!.Data["albumName"][0], Genre=load!.Genre, RecordLabel = load!.RecordLabel, ReleaseDate=load!.ReleaseDate, } };
 
 
 			
@@ -29,10 +31,15 @@ namespace AvaloniaMusic
                 td.Duration = load.Data["duration"][i];
 				td.ArtistName = load.Data["artistName"][i];
 				td.AlbumName = load.Data["albumName"][i];
-				td.Genre = load.Data["genre"][i];
+				if (load.Data["genre"] != null)
+                {
+					td.Genre = load.Genre;
+				}
+				
                 items.Add(td);
 			}
 			
+
 			phonesList.Items = items;
 			playlistList.Items = playlist;
 		}
